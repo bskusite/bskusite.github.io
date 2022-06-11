@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<div class="photo-grid">
+    {% for photo in site.photos %}
+    <div class="photo-grid-photo">
+        <a href="{{ photo.url }}">
+            <img src="/assets/images/{{ photo.name }}">
+        </a>
+    </div>
+    {% endfor %}
+</div>

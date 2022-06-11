@@ -1,0 +1,18 @@
+.photo-grid {
+    display: flex;
+    flex: 1 1 1 1;
+    margin: 8px;
+
+    &-photo {
+        cursor: pointer;
+
+        &:not(:nth-child(4)) {
+            margin-right: 8px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
