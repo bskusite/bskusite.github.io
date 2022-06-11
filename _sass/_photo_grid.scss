@@ -1,19 +1,20 @@
 .photo-grid {
-    display: flex;
-    flex: 1 1 1 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
     margin: 8px;
-    flex-wrap: wrap;
+
+    &-group {
+        display: flex;
+        flex-direction: column;
+    }
 
     &-photo {
-        cursor: pointer;
-
-        &:not(:nth-child(4)) {
-            margin-right: 8px;
-        }
-
         img {
             display: block;
             width: 100%;
+            cursor: pointer;
+            margin-bottom: 8px;
         }
     }
 }

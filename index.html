@@ -2,11 +2,45 @@
 layout: default
 ---
 <div class="photo-grid">
-    {% for photo in site.photos %}
-    <div class="photo-grid-photo">
-        <a href="{{ photo.url }}">
-            <img src="/assets/images/{{ photo.name }}">
-        </a>
+    {% assign group_length = site.photos | size | divided_by: 4 %}
+    <!-- Section 1 -->
+    {% for photo in site.photos limit: group_length %}
+    <div class="photo-grid-group">
+        <div class="photo-grid-photo">
+            <a href="{{ photo.url }}">
+                <img src="/assets/images/{{ photo.name }}">
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+    <!-- Section 2 -->
+    {% for photo in site.photos limit: group_length offset: continue %}
+    <div class="photo-grid-group">
+        <div class="photo-grid-photo">
+            <a href="{{ photo.url }}">
+                <img src="/assets/images/{{ photo.name }}">
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+    <!-- Section 3 -->
+    {% for photo in site.photos limit: group_length offset: continue %}
+    <div class="photo-grid-group">
+        <div class="photo-grid-photo">
+            <a href="{{ photo.url }}">
+                <img src="/assets/images/{{ photo.name }}">
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+    <!-- Section 4 -->
+    {% for photo in site.photos limit: group_length offset: continue %}
+    <div class="photo-grid-group">
+        <div class="photo-grid-photo">
+            <a href="{{ photo.url }}">
+                <img src="/assets/images/{{ photo.name }}">
+            </a>
+        </div>
     </div>
     {% endfor %}
 </div>
