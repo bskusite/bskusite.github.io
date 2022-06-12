@@ -1,6 +1,6 @@
 ---
 title: 'Hello, Louder'
-name: '5 Hello, Louder.jpeg'
+name: '5 Hello, louder.jpeg'
 layout: picture
 ---
 
